@@ -3,33 +3,110 @@
 // Stylelint and EditorConfig are working properly. If both tools are, indeed,
 // working correctly, then you’d see various errors in your editor about
 // indentation and violations of CSS syntax. When you save this file, your
-// editor should strip all excess newlines and whitespace characters from the
-// file. If both of these events occur, then Stylelint and EditorConfig are
+// editor should strip all excess newlines and whitespace characters from
+// the file. If both of these events occur, then Stylelint and EditorConfig are
 // working correctly.
 //
 // DON’T PROCEED UNTIL YOU’RE SURE STYLELINT AND EDITORCONFIG ARE WORKING RIGHT
 // -------------------------------------------------------------------------- */
-abcdef {
-     color: cs275
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
+h1 {
+  font-size: 2rem;
+  line-height: 1.1875;
+  font-weight: 600;
+}
 
+.carousel {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+}
 
+.slide {
+  width: 640px;
+  padding: 0 20px;
+}
 
+/* Album Container: Centers everything */
+.album-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
 
+/* Centered album title */
+.album-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px; /* Adds space below the title */
+}
 
+/* Layout: Image on top, text below */
+.album-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+/* Album Cover */
+.album-cover {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+}
 
+.album-cover img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
+/* Album Review Section */
+.album-review {
+  max-width: 640px;
+  padding: 10px;
+  text-align: left;
+}
 
+/* ARROW BUTTONS */
+.arrow {
+  position: absolute;
+  top: 85%; /* Moves arrows down slightly */
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  z-index: 10;
+  font-size: 24px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+}
 
+/* Left and Right Arrow Adjustments */
+.arrow.left {
+  left: calc(50% - 100px);
+}
 
-
-
-
-
-
-
-
-
-
+.arrow.right {
+  left: calc(50% + 100px);
+}
